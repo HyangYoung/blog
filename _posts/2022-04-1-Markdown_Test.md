@@ -2,6 +2,7 @@
 toc: true
 layout: post
 description: Markdown post uploading practice
+comments: true
 categories: [markdown]
 title: Markdown Test
 ---
