@@ -15,6 +15,7 @@ permalink: /about/
 
 
 <h3 align="left">Languages and Tools:</h3>
+
 - Python, Javascript
 - Django, React
 - SQL
