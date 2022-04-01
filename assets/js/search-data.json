@@ -40,7 +40,7 @@
   
       ,"page1": {
           "title": "About Me",
-          "content": "Hi 👋, I&#39;m Young . A fresh full stack developer from Korea . 🔭 I’m currently working on Refrigerator Management Site | 🌱 I’m currently learning PHP | 📝 I recently started logging what I learned here | 💬 Ask me about Python, Django | 📄 Know about my experiences in Linkedin | . Languages and Tools: . . .",
+          "content": "Hi 👋, I&#39;m Young . A fresh full stack developer from Korea . 🔭 I’m currently working on Refrigerator Management Site | 🌱 I’m currently learning PHP | 📝 I recently started logging what I learned here | 💬 Ask me about Python, Django | 📄 Know about my experiences in Linkedin | . Languages and Tools: . Python, Javascript | Django, React | SQL | . .",
           "url": "https://hyangyoung.github.io/blog/about/",
           "relUrl": "/about/",
           "date": ""
