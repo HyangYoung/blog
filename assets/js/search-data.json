@@ -2,7 +2,7 @@
   
     
         "post0": {
-            "title": "Open a github blog in 10 minutes part 1",
+            "title": "Open a GitHub Blog in 10 minutes (part 1)",
             "content": "Go to the fastpages GitHub repository, click setup instructions | Click ‘on this link’ | Create a repository | . | Wait until the ‘Pull Request’ is done in your repository . | Click Initial setup and follow the directions. Generate SSH key-pair: RSA, 4096 Click to generate secret and deploy keys | Copy ‘Private Key’ and paste it to the secret key (Name: SSH_DEPLOY_KEY) | Copy the ‘Public Key’ and paste it to the deploy key. | . | Click Merge pull request below Initial setup description . | After 2 minutes or so, you can see your blog address at your repository’s README.md |",
             "url": "https://hyangyoung.github.io/blog/github%20blog/2022/04/02/github_blog.html",
             "relUrl": "/github%20blog/2022/04/02/github_blog.html",
