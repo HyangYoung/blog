@@ -53,3 +53,34 @@ brew install httpd
                   PHPIniDir /etc
                   ```
         - Save (:wq)
+  
+4. Modify php.ini file
+     - find php.ini file
+     ```bash
+     find / -name "php.ini"
+     ```
+     - Go to the folder where the php.ini file is located
+     ```bash
+     cd /opt/homebrew/etc/php
+     ```
+     - Modify the pip.ini file<br>
+         - Line 198 -> Change `short_open_tag = On`
+        
+5. Execute Apache Server
+     - Check the service list 
+     ```bash
+     brew services list
+     ```
+     - httpd server startup
+     ```bash
+     brew services start httpd
+     ```
+ 
+6. Connect to localhost
+![]({{site.baseurl}}/images/2022-04-02-apache_setup.png "https://github.com/hyangyoung")
+
+7. To stop httpd server
+     ```bash
+     brew services stop httpd
+     ```
+
