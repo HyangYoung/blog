@@ -123,48 +123,62 @@ Therefore, we need some prep work to run PHP and apache servers on Mac.</p>
 </blockquote>
 
 <ol>
-  <li>
-    <p>PHP installation
-‘'’bash
-brew install php@8.0
-‘’’</p>
+  <li>PHP installation
+    <div class="language-bash highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>brew <span class="nb">install </span>php@8.0
+</code></pre></div>    </div>
   </li>
-  <li>
-    <p>httpd(apache) installation 
-‘'’bash
-brew install httpd
-‘’’</p>
+  <li>httpd(apache) installation
+    <div class="language-bash highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>brew <span class="nb">install </span>httpd
+</code></pre></div>    </div>
   </li>
-  <li>
-    <p>Modifying the httpd.conf file</p>
+  <li>Modifying the httpd.conf file
     <ul>
       <li>file find command $find ‘Find Path’ ‘Format’ “‘File Name’.extension”
-‘'’bash
-find / -name “httpd.conf”
-‘’’</li>
+        <div class="language-bash highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>find / <span class="nt">-name</span> <span class="s2">"httpd.conf"</span>
+</code></pre></div>        </div>
+      </li>
       <li>Go to the folder where httpd is installed
-‘'’bash
-cd /opt/homebrew/etc/httpd
-‘’’</li>
+        <div class="language-bash highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> /opt/homebrew/etc/httpd
+</code></pre></div>        </div>
+      </li>
       <li>Open the httpd.conf file as admin (enter the password)
-‘'’bash
-sudo vi httpd.conf
-‘’’</li>
-      <li>Modify httpd.conf
-    - Line 53 -&gt; Change to Listen 80
-    - Line 182 -&gt; Uncomment LoadModule rewrite_module lib/httpd/modules/mod_rewrite.so
-    - Add LoadModule php_module /opt/homebrew/opt/php@8.0/lib/httpd/modules/libphp.so to the bottom line.(path installed in brew install php)
-    - Line 195 -&gt; Change User Username
-    - Line 196 -&gt; Change to Group staff
-    - Line 217 -&gt; Change to ServerAdmin localhost
-    - Line 250 -&gt; Change to DocumentRoot “Project Path”
-    - Line 251 -&gt; Change to &lt;Directory “Project Path”&gt;
-    - Line 271 -&gt; Change to Allow Override All
-    - add to the bottom line
-        - AddType application/x-httpd-php .html .php
-        - AddType application/x-httpd-php-source .phps
-        - PHPIniDir /etc
-    - Save (:wq)</li>
+        <div class="language-bash highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>vi httpd.conf
+</code></pre></div>        </div>
+      </li>
+      <li>Modify httpd.conf <br>
+        <ul>
+          <li>Line 53 -&gt; Change to <code class="language-plaintext highlighter-rouge">Listen 80</code>
+</li>
+          <li>Line 182 -&gt; Uncomment <code class="language-plaintext highlighter-rouge">LoadModule rewrite_module lib/httpd/modules/mod_rewrite.so</code>
+</li>
+          <li>Add <code class="language-plaintext highlighter-rouge">LoadModule php_module /opt/homebrew/opt/php@8.0/lib/httpd/modules/libphp.so</code> to the bottom line (path installed in brew install php)</li>
+          <li>Line 195 -&gt; Change <code class="language-plaintext highlighter-rouge">User Username</code>
+</li>
+          <li>Line 196 -&gt; Change to <code class="language-plaintext highlighter-rouge">Group staff</code>
+</li>
+          <li>Line 217 -&gt; Change to <code class="language-plaintext highlighter-rouge">ServerAdmin localhost</code>
+</li>
+          <li>Line 250 -&gt; Change to <code class="language-plaintext highlighter-rouge">DocumentRoot "Project Path"</code>
+</li>
+          <li>Line 251 -&gt; Change to <code class="language-plaintext highlighter-rouge">&lt;Directory "Project Path"&gt;</code>
+</li>
+          <li>Line 271 -&gt; Change to <code class="language-plaintext highlighter-rouge">Allow Override All</code>
+</li>
+          <li>add to the bottom line
+       <code class="language-plaintext highlighter-rouge">bash
+       AddType application/x-httpd-php .html .php
+       AddType application/x-httpd-php-source .phps
+       PHPIniDir /etc
+      </code>
+</li>
+          <li>Save (:wq)</li>
+        </ul>
+      </li>
     </ul>
   </li>
 </ol>
