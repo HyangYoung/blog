@@ -4,22 +4,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Today I Learned | An easy to use blogging platform with support for Jupyter Notebooks.</title>
+<title>PHP &amp; Apache Initial Setup on macOS | Today I Learned</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Today I Learned" />
+<meta property="og:title" content="PHP &amp; Apache Initial Setup on macOS" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
-<meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
-<link rel="canonical" href="https://hyangyoung.github.io/blog/" />
-<meta property="og:url" content="https://hyangyoung.github.io/blog/" />
+<meta name="description" content="How to run Apache and PHP for on a macOS Monterey version 12.3" />
+<meta property="og:description" content="How to run Apache and PHP for on a macOS Monterey version 12.3" />
+<link rel="canonical" href="https://hyangyoung.github.io/blog/php/2022/04/02/apache_setup.html" />
+<meta property="og:url" content="https://hyangyoung.github.io/blog/php/2022/04/02/apache_setup.html" />
 <meta property="og:site_name" content="Today I Learned" />
-<meta property="og:image" content="https://hyangyoung.github.io/blog/images/logo.png" />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="https://hyangyoung.github.io/blog/images/logo.png" />
-<meta property="twitter:title" content="Today I Learned" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-04-02T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="PHP &amp; Apache Initial Setup on macOS" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"Today I Learned","image":"https://hyangyoung.github.io/blog/images/logo.png","name":"Today I Learned","url":"https://hyangyoung.github.io/blog/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-04-02T00:00:00-05:00","datePublished":"2022-04-02T00:00:00-05:00","description":"How to run Apache and PHP for on a macOS Monterey version 12.3","headline":"PHP &amp; Apache Initial Setup on macOS","mainEntityOfPage":{"@type":"WebPage","@id":"https://hyangyoung.github.io/blog/php/2022/04/02/apache_setup.html"},"url":"https://hyangyoung.github.io/blog/php/2022/04/02/apache_setup.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://hyangyoung.github.io/blog/feed.xml" title="Today I Learned" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -87,41 +86,121 @@ window.onload = wrap_img;
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <div class="home"><p><img src="/blog/images/main.jpg" alt="" title="https://github.com/hyangyoung" />
-<a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fhyangyoung.github.io%2Fblog%2F&amp;count_bg=%23000000&amp;title_bg=%23555555&amp;icon=bosch.svg&amp;icon_color=%23FFFFFF&amp;title=hits&amp;edge_flat=false" alt="Hits" /></a></p>
-<h1 id="posts">Posts</h1>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">PHP &amp; Apache Initial Setup on macOS</h1><p class="page-description">How to run Apache and PHP for on a macOS Monterey version 12.3</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-04-02T00:00:00-05:00" itemprop="datePublished">
+        Apr 2, 2022
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      1 min read
+    
+</span></p>
 
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/blog/categories/#PHP">PHP</a>
+        
+      
+      </p>
+    
 
-  
+    </header>
 
-  <!-- Hide posts if front matter flag hide:true -->
-  
-  
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#start-php-on-macos">Start PHP on macOS</a></li>
+</ul><h2 id="start-php-on-macos">
+<a class="anchor" href="#start-php-on-macos" aria-hidden="true"><span class="octicon octicon-link"></span></a>Start PHP on macOS</h2>
+<blockquote>
+  <p>macOS has PHP and apache (apachectl) installed by default.<br>
+However, if you look at the httpd.conf file, it says PHP has been removed from macOS 12 version.
+<br>“PHP was deprecated in macOS 11 and removed from macOS 12” (/etc/apache2/httpd.conf)<br>
+Therefore, we need some prep work to run PHP and apache servers on Mac.</p>
+</blockquote>
 
-  <!-- Sort posts by rank, then date -->
-  
-  
-  
+<ol>
+  <li>
+    <p>PHP installation
+‘'’bash
+brew install php@8.0
+‘’’</p>
+  </li>
+  <li>
+    <p>httpd(apache) installation 
+‘'’bash
+brew install httpd
+‘’’</p>
+  </li>
+  <li>
+    <p>Modifying the httpd.conf file</p>
+    <ul>
+      <li>file find command $find ‘Find Path’ ‘Format’ “‘File Name’.extension”
+‘'’bash
+find / -name “httpd.conf”
+‘’’</li>
+      <li>Go to the folder where httpd is installed
+‘'’bash
+cd /opt/homebrew/etc/httpd
+‘’’</li>
+      <li>Open the httpd.conf file as admin (enter the password)
+‘'’bash
+sudo vi httpd.conf
+‘’’</li>
+      <li>Modify httpd.conf
+    - Line 53 -&gt; Change to Listen 80
+    - Line 182 -&gt; Uncomment LoadModule rewrite_module lib/httpd/modules/mod_rewrite.so
+    - Add LoadModule php_module /opt/homebrew/opt/php@8.0/lib/httpd/modules/libphp.so to the bottom line.(path installed in brew install php)
+    - Line 195 -&gt; Change User Username
+    - Line 196 -&gt; Change to Group staff
+    - Line 217 -&gt; Change to ServerAdmin localhost
+    - Line 250 -&gt; Change to DocumentRoot “Project Path”
+    - Line 251 -&gt; Change to &lt;Directory “Project Path”&gt;
+    - Line 271 -&gt; Change to Allow Override All
+    - add to the bottom line
+        - AddType application/x-httpd-php .html .php
+        - AddType application/x-httpd-php-source .phps
+        - PHPIniDir /etc
+    - Save (:wq)</li>
+    </ul>
+  </li>
+</ol>
 
- 
-  
+  </div><!-- from https://github.com/utterance/utterances 
+<script src="https://utteranc.es/client.js"
+        repo="HyangYoung/blog"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>-->
 
-   <!-- Assemble final sorted posts array -->
-  
-  <ul class="post-list"><li><h3>
-    <a class="post-link" href="/blog/php/2022/04/02/apache_setup.html">
-    PHP &amp; Apache Initial Setup on macOS
-    </a>
-</h3><p class="post-meta-description">How to run Apache and PHP for on a macOS Monterey version 12.3</p><p class="post-meta">Apr 2, 2022</p>
-</li><li><h3>
-    <a class="post-link" href="/blog/github%20blog/2022/04/02/github_blog.html">
-    Open a GitHub Blog in 10 minutes (part 1)
-    </a>
-</h3><p class="post-meta-description">Learn how to easily open github blogs through fastpages.</p><p class="post-meta">Apr 2, 2022</p>
-</li></ul>
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://todayilearned-1.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a class="u-url" href="/blog/php/2022/04/02/apache_setup.html" hidden></a>
+</article>
 
-    </div>
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/blog/"></data>
