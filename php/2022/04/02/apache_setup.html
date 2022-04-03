@@ -181,7 +181,51 @@ Therefore, we need some prep work to run PHP and apache servers on Mac.</p>
       </li>
     </ul>
   </li>
+  <li>Modify php.ini file
+    <ul>
+      <li>find php.ini file
+        <div class="language-bash highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>  find / <span class="nt">-name</span> <span class="s2">"php.ini"</span>
+</code></pre></div>        </div>
+      </li>
+      <li>Go to the folder where the php.ini file is located
+        <div class="language-bash highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>  <span class="nb">cd</span> /opt/homebrew/etc/php
+</code></pre></div>        </div>
+      </li>
+      <li>Modify the pip.ini file<br>
+        <ul>
+          <li>Line 198 -&gt; Change <code class="language-plaintext highlighter-rouge">short_open_tag = On</code>
+</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Execute Apache Server
+    <ul>
+      <li>Check the service list
+        <div class="language-bash highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>  brew services list
+</code></pre></div>        </div>
+      </li>
+      <li>httpd server startup
+        <div class="language-bash highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>  brew services start httpd
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Connect to localhost
+<img src="/blog/images/2022-04-02-apache_setup.png" alt="" title="https://github.com/hyangyoung"></p>
+  </li>
+  <li>To stop httpd server
+    <div class="language-bash highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>  brew services stop httpd
+</code></pre></div>    </div>
+  </li>
 </ol>
+
 
   </div><!-- from https://github.com/utterance/utterances 
 <script src="https://utteranc.es/client.js"
