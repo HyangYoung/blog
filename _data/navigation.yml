@@ -1,0 +1,30 @@
+# main links
+main:
+  - title: "Home"
+    url: hyangyoung.github.io/blog/
+
+  - title: "About"
+    url: /about/
+
+  - title: "GitHub"
+    url: https://github.com/HyangYoung
+    
+  # - title: "Projects"
+  #   url: /projects/
+
+  # - title: "Categories"
+  #   url: /categories/
+
+# sidebar navigation (categories)
+# 2022.02.15 sidebar update : simple ver.
+categories:
+  - title: "Python"
+    url: /categories/python/
+  - title: "PHP"
+    url: /categories/PHP/
+  - title: "Web"
+    url: /categories/web/
+  - title: "Git"
+    url: /categories/git/
+  - title: "UX/UI Design"
+    url: /categories/UX/UI-Design/
